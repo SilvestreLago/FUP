@@ -1,0 +1,1 @@
+        print(coeficiente, end= ' ')

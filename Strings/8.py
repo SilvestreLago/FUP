@@ -1,0 +1,5 @@
+txt = str(input())
+l1 = str(input())
+l2 = str(input())
+txt = txt.replace(l1, l2)
+print(txt)
