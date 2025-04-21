@@ -4,7 +4,6 @@ def funcao(x):
         num = c * c + 1
         den = c + 3
         soma += num / den
-    soma = f"{soma:.2f}"
     return soma
 
 print(funcao(3))
