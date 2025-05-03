@@ -1,6 +1,8 @@
 x = int(input())
 
-if x % 2 == 0:
+cont = x % 2
+
+if cont == 0:
     print("Par")
 else:
     print("Impar")

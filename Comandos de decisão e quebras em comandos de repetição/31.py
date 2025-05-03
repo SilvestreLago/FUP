@@ -5,7 +5,8 @@ if num1 > num2:
 soma = 0
 mult = 1
 for c in range(num1, num2+1):
-    if c % 2 == 0:
+    cont = c % 2
+    if cont == 0:
         soma += c
     else:
         mult *= c

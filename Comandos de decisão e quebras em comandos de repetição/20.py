@@ -1,6 +1,7 @@
 def funcao(x):
     y = x**(1/2)
-    if y * y == x:
+    z = y*y
+    if z == x:
         return True
     else:
         return False
