@@ -1,2 +1,3 @@
 quant = int(input())
-print("="*quant)
+for c in range(quant):
+    print("=", end='')

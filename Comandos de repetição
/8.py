@@ -1,7 +1,5 @@
 n = int(input())
-cont = 0
 num = 1
-while cont < n:
+for c in range(n):
     print(num)
-    cont += 1
     num += 2
