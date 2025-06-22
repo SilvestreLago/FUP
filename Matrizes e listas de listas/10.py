@@ -1,16 +1,17 @@
 matriz = []
 soma = 0
-dp = 0
-for c in range(4):
-    lista = []
-    for i in range(4):
-        lista.append(int(input()))
-    matriz.append(lista)
 
-for j in range(4):
-    for k in range(4):
-        if k == dp:
-            soma += matriz[j][k]
-    dp += 1
+for c in range(16):
+    valor = int(input())
+    linha = c // 4
+    coluna = c % 4
+
+    if coluna == 0:
+        matriz.append([])
+
+    matriz[linha].append(valor)
+
+    if linha == coluna:
+        soma += valor
 
 print(soma)
