@@ -13,10 +13,8 @@ for c in range(5):
     matrizAlterada.append(lista.copy())
 
 for j in range(5):
-    for k in range(5):
-        while k > dp:
-            matrizAlterada[j][k] = 0
-            break
+    for k in range(j+1,5):
+        matrizAlterada[j][k] = 0
     dp += 1
 
 for q in range(5):
