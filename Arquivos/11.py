@@ -1,21 +1,19 @@
-def funcao(arquivo, nome):
-    arq = open(arquivo, 'r')
-    content = arq.read().lower()
-    cont = 0
-    palavra = ''
-    for conteudo in content:
-        if conteudo != ' ' and conteudo != '\n':
-            palavra += conteudo
-            if palavra == nome.lower():
-                cont +=1
-                palavra = ''
-        else:
-            if palavra == nome.lower():
-                cont +=1
-            palavra = ''
-    return cont
+def funcao(nome_arquivo, palavra):
+    with open(nome_arquivo, 'r') as arquivo:
+        conteudo = arquivo.read().lower()
 
-x1 = input("")
-x2 = input("")
-y = funcao(x1, x2)
-print(f"{y}")
+    palavra = palavra.lower()
+
+    contagem = 0
+    len_palavra = len(palavra)
+
+    if len_palavra == 0:
+        return 0
+
+    for i in range(len(conteudo) - len_palavra + 1):
+        fatia = conteudo[i: i + len_palavra]
+
+        if fatia == palavra:
+            contagem += 1
+
+    return contagem
